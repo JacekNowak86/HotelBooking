@@ -7,6 +7,7 @@ class Hotels extends Component{
             <div>
                  Hotels
                  <Hotel/>
+                 <Hotel/>
             </div>
         );
     }
