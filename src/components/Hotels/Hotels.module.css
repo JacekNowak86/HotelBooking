@@ -1,0 +1,12 @@
+ 
+    .hotelsContainer{
+    
+        border: 1px solid #cdcdcd;
+        padding: 10px;
+        
+    }
+
+    .title{
+        font-weight: bold;
+        font-size: 1.2rem;
+    }

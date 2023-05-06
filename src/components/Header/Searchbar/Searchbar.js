@@ -9,7 +9,7 @@ function Searchbar(){
                 <input className="form-control"  type="text" placeholder="Szukaj..."/>
             </div>
             <div className="col">
-                <button className="btn btn-primary">Szukaj...</button>
+                <button className=" btn btn-secondary ms-2">Szukaj...</button>
             </div>
         </div>
         );
