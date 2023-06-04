@@ -1,9 +1,18 @@
+import PropTypes from 'prop-types'
 import React from "react";
 import styles from './Hotel.module.css'
 import hotelImg from '../../../assets/images/1.jpg'
 
+const propTypes = {
+    name: PropTypes.string.isRequired,
+    city: PropTypes.string.isRequired,
+    rating: PropTypes.number.isRequired,
+    description: PropTypes.string.isRequired
 
-function Hotel(){
+};
+
+
+function Hotel(props){
     return (
     <div className={`card ${styles.hotel}`}>
         <div className="card-body">
@@ -14,12 +23,12 @@ function Hotel(){
             <div className="col-8">
                 <div className="row">
                     <div className="col">
-                        <p className={styles.title}>Pensjonat</p>
-                        <span className="badge badge-light text-dark">Warszawa</span>
+                        <p className={styles.title}>{props.name}</p>
+                        <span className="badge badge-light text-dark">{props.city}</span>
                     </div>
                     <div className="col text-end">
                         <h5>
-                            <p>Ocena: 8.3</p>
+                            <p>Ocena: {props.rating}</p>
                             <p className="badge bg-secondary">opinie: 23</p>
                             <p><a href="#" className="btn btn-primary float-end mt-2 px-4">Pokaż</a></p>
                             
@@ -28,7 +37,7 @@ function Hotel(){
                 </div>
             </div>
             <div className="col-12">
-                <p className={styles.description}>Nulla nulla minim excepteur consequat exercitation. Nulla fugiat occaecat Lorem qui. Voluptate ex et occaecat do. Incididunt dolor tempor ut eiusmod reprehenderit mollit culpa nostrud nostrud qui. Do exercitation qui aute adipisicing sit dolore.</p>
+                <p className={styles.description}>{props.description}</p>
             </div>
         </div>
         </div>
@@ -36,5 +45,13 @@ function Hotel(){
     
     );
 }
+Hotel.propTypes = propTypes;
+// Hotel.defaultProps = {
+//     name: ...,
+//     city: ...,
+//     rating: ...,
+//     description: ...
+
+// };
 
 export default Hotel;
